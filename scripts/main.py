@@ -2,6 +2,7 @@ import cv2
 import mediapipe as mp
 import socket
 
+
 # Initialize MediaPipe Hands
 mp_hands = mp.solutions.hands
 
@@ -11,6 +12,7 @@ hands = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5
 
 # Initialize utility to draw landmarks on the frame
 mp_draw = mp.solutions.drawing_utils
+
 
 # TCP Connection Setup
 TCP_IP = "127.0.0.1"
@@ -26,6 +28,7 @@ except Exception as e:
 cap = cv2.VideoCapture(0)
 
 print("Capturing video...")
+
 
 # Main loop
 while True:
